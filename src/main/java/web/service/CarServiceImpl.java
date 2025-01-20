@@ -19,4 +19,8 @@ public class CarServiceImpl implements CarService {
                 new Car(5L, "Nissan", 5000L)
         );
     }
+
+    public List<Car> getLimitedCars(int count) {
+        return getCars().stream().limit(count).toList();
+    }
 }
